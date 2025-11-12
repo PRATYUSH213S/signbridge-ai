@@ -34,8 +34,13 @@ An AI-powered sign language learning platform that combines interactive lessons,
   - Responsive design
   - Beautiful animations and transitions
   - Intuitive navigation
-    <img width="1919" height="846" alt="Screenshot 2025-11-13 011514" src="https://github.com/user-attachments/assets/3d2d4cbd-fc3e-4f82-a19f-9c31e0b46dc6" />
+<img width="1919" height="975" alt="Screenshot 2025-11-13 010557" src="https://github.com/user-attachments/assets/5f72afd2-12ca-4261-a6c6-37af26a394cb" />
 
+<img width="900" height="885" alt="Screenshot 2025-11-13 010620" src="https://github.com/user-attachments/assets/a3a594a2-4f64-4672-8419-13a0fabcb6a4" />
+<img width="900" height="897" alt="Screenshot 2025-11-13 010706" src="https://github.com/user-attachments/assets/d5df4c08-4e0f-44a0-a743-cd7a41304528" />
+<img width="900" height="859" alt="Screenshot 2025-11-13 010819" src="https://github.com/user-attachments/assets/bd48ebbd-4831-4258-9402-fd8ecd8acf0e" />
+<img width="900" height="756" alt="Screenshot 2025-11-13 011018" src="https://github.com/user-attachments/assets/a8517522-dd03-4300-9796-be952e6cfafd" />
+<img width="900" height="846" alt="Screenshot 2025-11-13 011514" src="https://github.com/user-attachments/assets/9bd7eac5-0975-467f-acab-ed2ab9996699" />
 
 ## 🛠️ Tech Stack
 
