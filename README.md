@@ -2,12 +2,9 @@
 
 An AI-powered sign language learning platform that combines interactive lessons, real-time hand recognition, and engaging quizzes to help users master sign language.
 
-![SignBridge-AI](https://img.shields.io/badge/SignBridge-AI-blue)
-![React](https://img.shields.io/badge/React-19.1.0-61DAFB?logo=react)
-![Node.js](https://img.shields.io/badge/Node.js-Express-339933?logo=node.js)
-![MongoDB](https://img.shields.io/badge/MongoDB-8.13.2-47A248?logo=mongodb)
 
-## 🌟 Features
+## 🌟 Features<img width="1919" height="975" alt="Screenshot 2025-11-13 010557" src="https://github.com/user-attachments/assets/c10f1bfb-b79e-4228-a68b-1b4bbe404c35" />
+
 
 - **Interactive Learning Modules**
   - Video-based lessons for beginners
