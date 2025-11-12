@@ -3,7 +3,7 @@
 An AI-powered sign language learning platform that combines interactive lessons, real-time hand recognition, and engaging quizzes to help users master sign language.
 
 
-## 🌟 Features<img width="1919" height="975" alt="Screenshot 2025-11-13 010557" src="https://github.com/user-attachments/assets/c10f1bfb-b79e-4228-a68b-1b4bbe404c35" />
+## 🌟 Features
 
 
 - **Interactive Learning Modules**
@@ -34,6 +34,8 @@ An AI-powered sign language learning platform that combines interactive lessons,
   - Responsive design
   - Beautiful animations and transitions
   - Intuitive navigation
+    <img width="1919" height="846" alt="Screenshot 2025-11-13 011514" src="https://github.com/user-attachments/assets/3d2d4cbd-fc3e-4f82-a19f-9c31e0b46dc6" />
+
 
 ## 🛠️ Tech Stack
 
