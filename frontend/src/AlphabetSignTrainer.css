@@ -1,0 +1,140 @@
+.alphabet-trainer {
+    background: #f4f7fc;
+    padding: 60px 20px;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .alphabet-trainer h1 {
+    font-size: 3rem;
+    color: #3f51b5;
+    margin-bottom: 30px;
+  }
+  
+  .instruction-box {
+    background: white;
+    border-left: 6px solid #3f51b5;
+    border-radius: 12px;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease;
+  }
+  
+  .instruction-box h2 {
+    font-size: 2.2rem;
+    color: #2e3c7e;
+  }
+  
+  .instruction-box p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-top: 10px;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .pause-btn {
+    margin-top: 30px;
+    background-color: #3f51b5;
+    color: white;
+    padding: 12px 25px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .pause-btn:hover {
+    background-color: #2c3e9e;
+  }
+  
+  .sign-image {
+    max-width: 200px;
+    height: auto;
+    margin-top: 10px;
+  }
+  
+
+
+  .alphabet-trainer-container {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .alphabet-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+    gap: 12px 16px; /* vertical gap = 12px, horizontal = 16px */
+    max-width: 300px;
+    margin-bottom: 20px;
+  }
+  
+  .alphabet-card {
+    background-color: #e0e0e0;
+    border-radius: 8px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .alphabet-card:hover {
+    background-color: #ccc;
+  }
+  
+  .alphabet-card.active {
+    background-color: #4caf50;
+    color: white;
+  }
+  
+  .main-content {
+    padding: 16px 20px;
+    margin-top: 10px;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+    background-color: #fff;
+  }
+  
+  .instruction-box {
+    text-align: center;
+  }
+  
+  .sign-image {
+    width: 200px;
+    margin-top: 20px;
+  }
+  
+  .pause-btn {
+    margin-top: 16px;
+    padding: 10px 20px;
+    font-weight: bold;
+  }
+
+  .trainer-layout {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    align-items: flex-start;
+    margin-top: 20px;
+  }
+  
+  .alphabet-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+    gap: 12px 16px;
+    width: 220px;
+  }
+  

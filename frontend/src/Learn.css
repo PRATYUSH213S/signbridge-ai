@@ -1,0 +1,159 @@
+
+.learn-page {
+    font-family: 'Segoe UI', sans-serif;
+    color: #2c2f54;
+    background-color: #f7f9ff;
+  }
+  
+  .learn-hero {
+    background: linear-gradient(to right, #ea1cf1, #16dd8d);
+    color: white;
+    padding: 100px 20px;
+    text-align: center;
+  }
+  
+  .learn-hero h1 {
+    font-size: 48px;
+    margin-bottom: 15px;
+  }
+  
+  .learn-hero p {
+    font-size: 20px;
+    max-width: 700px;
+    margin: auto;
+  }
+  
+  .learning-paths {
+    padding: 60px 20px;
+    background-color: #ffffff;
+    text-align: center;
+  }
+  
+  .learning-paths h2 {
+    color: #4a60f0;
+    margin-bottom: 40px;
+  }
+  
+  .path-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  .path-card {
+    background: #eef1ff;
+    border-radius: 16px;
+    padding: 30px;
+    width: 280px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .path-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .path-card h3 {
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .path-card button {
+    margin-top: 15px;
+    background-color: #4a60f0;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .path-card button:hover {
+    background-color: #3c4fcf;
+  }
+  
+  .features {
+    padding: 60px 20px;
+    background-color: #f0f3ff;
+    text-align: center;
+  }
+  
+  .features h2 {
+    color: #4a60f0;
+    margin-bottom: 40px;
+  }
+  
+  .features-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  
+  .feature-box {
+    background: #ffffff;
+    border-left: 6px solid #4a60f0;
+    padding: 25px;
+    border-radius: 12px;
+    width: 280px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    transition: 0.3s ease;
+  }
+  
+  .feature-box:hover {
+    transform: scale(1.03);
+  }
+  
+  .learn-cta {
+    padding: 60px 20px;
+    background: linear-gradient(to right, #4a60f0, #6e7dfb);
+    color: white;
+    text-align: center;
+  }
+  
+  .learn-cta h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+  }
+  
+  .learn-cta p {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  .learn-cta button {
+    background: white;
+    color: #4a60f0;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s;
+  }
+  
+  .learn-cta button:hover {
+    background-color: #e0e4ff;
+    color: #3943e2;
+  }
+  
+  @media (max-width: 768px) {
+    .path-grid,
+    .features-list {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .learn-hero h1 {
+      font-size: 36px;
+    }
+  
+    .learn-hero p,
+    .learn-cta p {
+      font-size: 16px;
+    }
+  }
+  

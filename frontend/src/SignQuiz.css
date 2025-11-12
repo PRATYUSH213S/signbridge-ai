@@ -1,0 +1,51 @@
+.sign-quiz {
+    text-align: center;
+    padding: 2rem;
+    background: #f0f7ff;
+    font-family: "Segoe UI", sans-serif;
+  }
+  
+  .video-input {
+    width: 500px;
+    height: auto;
+    margin-top: 20px;
+    border: 4px solid #4e91f9;
+    border-radius: 12px;
+  }
+  
+  .question,
+  .desc,
+  .timer {
+    font-size: 1.2rem;
+    margin: 10px 0;
+  }
+  
+  .message {
+    font-size: 1.5rem;
+    margin: 1rem;
+    font-weight: bold;
+  }
+  
+  .correct {
+    color: green;
+  }
+  
+  .wrong {
+    color: red;
+  }
+  
+  .pause-button {
+    background: #4e91f9;
+    color: white;
+    padding: 0.6rem 1.2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 20px;
+  }
+  
+  .pause-button:hover {
+    background: #3367d6;
+  }
+  

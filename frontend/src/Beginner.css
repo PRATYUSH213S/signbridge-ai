@@ -1,0 +1,67 @@
+.beginner-page {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9fbfe;
+    color: #333;
+  }
+  
+  .beginner-hero {
+    background: linear-gradient(to right, #3f51b5, #5c6bc0);
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+  }
+  
+  .beginner-hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+  }
+  
+  .beginner-hero-content p {
+    font-size: 1.2rem;
+  }
+  
+  .video-lessons {
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  .video-lessons h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .video-lessons p {
+    margin-bottom: 40px;
+    color: #555;
+  }
+  
+  .video-grid {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    padding: 0 10px;
+  }
+  
+  .video-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .video-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(63, 81, 181, 0.2);
+  }
+  
+  .video-card h3 {
+    margin-bottom: 10px;
+    color: #3f51b5;
+  }
+  
+  video {
+    width: 100%;
+    border-radius: 8px;
+  }
+  

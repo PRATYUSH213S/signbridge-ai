@@ -1,0 +1,7 @@
+{
+    "globals": {
+      "Hands": "readonly",
+      "Camera": "readonly"
+    }
+  }
+  

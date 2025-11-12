@@ -1,0 +1,180 @@
+/* About Page Styles */
+.about-page {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f8f9fc;
+    color: #333;
+  }
+  
+  .about-hero {
+    background: linear-gradient(to right, #4e54c8, #8f94fb);
+    color: white;
+    padding: 80px 40px;
+    text-align: center;
+  }
+  
+  .about-hero h1 {
+    font-size: 48px;
+    margin-bottom: 15px;
+  }
+  
+  .about-hero p {
+    font-size: 20px;
+    max-width: 700px;
+    margin: auto;
+  }
+  
+  .container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 60px 20px;
+  }
+  
+  .about-story,
+  .about-how-it-works,
+  .about-partners,
+  .about-faq,
+  .about-vision {
+    padding: 60px 20px;
+    background-color: white;
+  }
+  
+  .about-story h2,
+  .about-how-it-works h2,
+  .about-partners h2,
+  .about-faq h2,
+  .about-vision h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .about-story p,
+  .about-vision p {
+    font-size: 18px;
+    max-width: 900px;
+    margin: auto;
+    color: #555;
+    text-align: center;
+  }
+  
+  .steps {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    margin-top: 30px;
+  }
+  
+  .step-box {
+    background-color: #edf0ff;
+    border-left: 5px solid #6a72df;
+    border-radius: 12px;
+    padding: 20px;
+    width: 280px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.06);
+    transition: transform 0.3s ease;
+  }
+  
+  .step-box:hover {
+    transform: translateY(-5px);
+  }
+  
+  .step-number {
+    display: inline-block;
+    background: #6a72df;
+    color: white;
+    border-radius: 50%;
+    padding: 10px;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .partner-grid {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 40px;
+  }
+  
+  .partner-card {
+    background-color: #f5f6ff;
+    border: 1px solid #d4d8ff;
+    border-radius: 12px;
+    width: 250px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
+  }
+  
+  .partner-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .partner-card img {
+    width: 80px;
+    margin-bottom: 10px;
+  }
+  
+  .partner-card h4 {
+    margin-bottom: 5px;
+    font-size: 18px;
+  }
+  
+  .partner-card p {
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .about-faq .faq-item {
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fafbff;
+  }
+  
+  .faq-item label {
+    display: block;
+    padding: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #e1e5ff;
+    color: #333;
+  }
+  
+  .faq-item input[type="checkbox"] {
+    display: none;
+  }
+  
+  .faq-item .faq-content {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 15px;
+    transition: all 0.4s ease;
+    background-color: white;
+  }
+  
+  .faq-item input:checked ~ .faq-content {
+    max-height: 200px;
+    padding: 15px;
+  }
+  
+  @media (max-width: 768px) {
+    .step-box, .partner-card {
+      width: 90%;
+    }
+  
+    .about-hero h1 {
+      font-size: 36px;
+    }
+  
+    .about-hero p {
+      font-size: 16px;
+    }
+  }
+  
