@@ -57,8 +57,10 @@ function Convert() {
     );
 
     ref.renderer.setSize(window.innerWidth * 0.57, window.innerHeight - 70);
-    document.getElementById("canvas").innerHTML = "";
-    document.getElementById("canvas").appendChild(ref.renderer.domElement);
+    const canvasElement = document.getElementById("canvas");
+    if (!canvasElement) return; // ✅ Check if canvas element exists
+    canvasElement.innerHTML = "";
+    canvasElement.appendChild(ref.renderer.domElement);
 
     ref.camera.position.z = 1.6;
     ref.camera.position.y = 1.4;

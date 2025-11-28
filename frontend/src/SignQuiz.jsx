@@ -110,72 +110,91 @@ const SignQuiz = () => {
   }, [answered, index, completed]);
 
   useEffect(() => {
+    if (!window.Hands || !window.Camera) {
+      console.warn("MediaPipe libraries not loaded yet");
+      return;
+    }
+
+    let camera = null;
+    let hands = null;
+
     const loadMediaPipe = async () => {
-      const hands = new window.Hands({
-        locateFile: (file) => `https://cdn.jsdelivr.net/npm/@mediapipe/hands/${file}`,
-      });
-  
-      hands.setOptions({
-        maxNumHands: 1,
-        modelComplexity: 1,
-        minDetectionConfidence: 0.7,
-        minTrackingConfidence: 0.5,
-      });
-  
-      hands.onResults((results) => {
-        if (completed) return; // ✅ Don't process anything after completion
-  
-        const canvas = canvasnumRef.current;
-        const ctx = canvas.getContext("2d");
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        ctx.drawImage(results.image, 0, 0, canvas.width, canvas.height);
-  
-        if (results.multiHandLandmarks?.length) {
-          const landmarks = results.multiHandLandmarks[0];
-  
-          window.drawConnectors(ctx, landmarks, window.HAND_CONNECTIONS, { color: "#00FF00", lineWidth: 3 });
-          window.drawLandmarks(ctx, landmarks, { color: "#FF0000", lineWidth: 1 });
-  
-          if (!answered && !cooldown.current) {
-            const isCorrect = quizData[index]?.detect?.(landmarks);
-            if (isCorrect) {
-              setFeedback("✅ Correct!");
-              setAnswered(true);
-              cooldown.current = true;
-  
-              setTimeout(() => {
-                cooldown.current = false;
-                nextQuestion();
-              }, 10000);
-            } else {
-              setFeedback("❌ Wrong!");
+      try {
+        hands = new window.Hands({
+          locateFile: (file) => `https://cdn.jsdelivr.net/npm/@mediapipe/hands/${file}`,
+        });
+    
+        hands.setOptions({
+          maxNumHands: 1,
+          modelComplexity: 1,
+          minDetectionConfidence: 0.7,
+          minTrackingConfidence: 0.5,
+        });
+    
+        hands.onResults((results) => {
+          if (completed) return; // ✅ Don't process anything after completion
+
+          const canvas = canvasnumRef.current;
+          if (!canvas) return; // ✅ Check if canvas exists
+          
+          const ctx = canvas.getContext("2d");
+          if (!ctx) return; // ✅ Check if context exists
+          
+          ctx.clearRect(0, 0, canvas.width, canvas.height);
+          ctx.drawImage(results.image, 0, 0, canvas.width, canvas.height);
+    
+          if (results.multiHandLandmarks?.length) {
+            const landmarks = results.multiHandLandmarks[0];
+    
+            window.drawConnectors(ctx, landmarks, window.HAND_CONNECTIONS, { color: "#00FF00", lineWidth: 3 });
+            window.drawLandmarks(ctx, landmarks, { color: "#FF0000", lineWidth: 1 });
+    
+            if (!answered && !cooldown.current) {
+              const isCorrect = quizData[index]?.detect?.(landmarks);
+              if (isCorrect) {
+                setFeedback("✅ Correct!");
+                setAnswered(true);
+                cooldown.current = true;
+    
+                setTimeout(() => {
+                  cooldown.current = false;
+                  nextQuestion();
+                }, 10000);
+              } else {
+                setFeedback("❌ Wrong!");
+              }
             }
           }
-        }
-      });
-  
-      if (numwebcamRef.current?.video) {
-        const camera = new window.Camera(numwebcamRef.current.video, {
-          onFrame: async () => {
-            if (!completed) {
-              await hands.send({ image: numwebcamRef.current.video });
-            }
-          },
-          width: 640,
-          height: 480,
         });
-  
-        camera.start();
-  
-        return () => {
-          camera.stop(); // ✅ stop camera on cleanup
-        };
+    
+        if (numwebcamRef.current?.video) {
+          const video = numwebcamRef.current.video;
+          camera = new window.Camera(video, {
+            onFrame: async () => {
+              if (!completed && video && hands) {
+                await hands.send({ image: video });
+              }
+            },
+            width: 640,
+            height: 480,
+          });
+
+          camera.start();
+        }
+      } catch (error) {
+        console.error("Error loading MediaPipe:", error);
       }
     };
   
-    const cleanup = loadMediaPipe();
+    loadMediaPipe();
+    
     return () => {
-      cleanup?.then((stop) => stop?.());
+      if (camera) {
+        camera.stop();
+      }
+      if (hands) {
+        hands.close();
+      }
     };
   }, [answered, index, completed]);
   
